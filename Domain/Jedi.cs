@@ -2,7 +2,7 @@ using GraphQL.Types;
 
 namespace Demo.Domain
 {
-    public class Jedi
+    public sealed class Jedi
     {
         private Jedi() { }
         public Jedi(long id, string name, string side)
@@ -13,12 +13,13 @@ namespace Demo.Domain
         }
 
         public long Id { get; private set; }
+
         public string Name { get; private set; }
 
         public string Side { get; private set; }
     }
 
-    public class JediType : ObjectGraphType<Jedi>
+    public sealed class JediType : ObjectGraphType<Jedi>
     {
         public JediType()
         {

@@ -12,7 +12,7 @@ namespace Demo.Repositories
         IEnumerable<Jedi> GetJedis();
     }
 
-    public class StarWarsDB : IStarWarsDB
+    public sealed class StarWarsDB : IStarWarsDB
     {
         public IEnumerable<Jedi> GetJedis() => new List<Jedi>
         {

@@ -1,9 +1,6 @@
 using System;
 using Demo.Graph;
 using Demo.Repositories;
-using GraphQL;
-using GraphQL.Http;
-using GraphQL.Types;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -24,7 +21,6 @@ namespace Demo
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<IServiceProvider>(c => c);
             services.AddTransient<IStarWarsDB, StarWarsDB>();
             services.AddTransient<IStarWarsQuery, StarWarsQuery>();
             services.AddSingleton<IStarWarsSchema, StarWarsSchema>();

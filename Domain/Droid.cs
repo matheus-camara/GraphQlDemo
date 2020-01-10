@@ -2,7 +2,7 @@ using GraphQL.Types;
 
 namespace Demo.Domain
 {
-    public class Droid
+    public sealed class Droid
     {
         private Droid() { }
         public Droid(long id, string model, string type)
@@ -13,12 +13,13 @@ namespace Demo.Domain
         }
 
         public long Id { get; private set; }
+
         public string Model { get; private set; }
 
         public string Type { get; private set; }
     }
 
-    public class DroidType : ObjectGraphType<Droid>
+    public sealed class DroidType : ObjectGraphType<Droid>
     {
         public DroidType()
         {

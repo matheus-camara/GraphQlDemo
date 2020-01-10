@@ -8,11 +8,11 @@ namespace Demo.Graph
     {
     }
 
-    public class StarWarsSchema : Schema, IStarWarsSchema
+    public sealed class StarWarsSchema : Schema, IStarWarsSchema
     {
-        public StarWarsSchema(IServiceProvider provider)
+        public StarWarsSchema(IStarWarsQuery provider)
         {
-            Query = provider.GetRequiredService<IStarWarsQuery>();
+            Query = provider;
         }
     }
 }

@@ -1,6 +1,3 @@
-using Demo.Graph;
-using GraphQL;
-using GraphQL.Types;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 

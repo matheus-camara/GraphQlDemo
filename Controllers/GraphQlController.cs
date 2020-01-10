@@ -7,7 +7,7 @@ namespace Demo.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class GraphQlController : ControllerBase
+    public sealed class GraphQlController : ControllerBase
     {
         private IStarWarsSchema Context { get; }
 
